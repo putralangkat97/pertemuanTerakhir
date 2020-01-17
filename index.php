@@ -1,6 +1,5 @@
 <?php 
 
-session_start();
 include 'koneksi.php';
 	
  ?>
@@ -18,13 +17,6 @@ include 'koneksi.php';
 				<li><a href="index.php">Home</a></li>
 				<li><a href="keranjang.php">Keranjang</a></li>
 				<li><a href="checkout.php">Checkout</a></li>
-				<?php if ($_SESSION['pelanggan']):
-				 ?>
-				<li><a href="logout.php">Logout</a></li>
-				<?php else: ?>
-				<li><a href="login.php">Login</a></li>
-				<?php endif ?>
-				
 			</ul>
 		</div>
 	</nav>

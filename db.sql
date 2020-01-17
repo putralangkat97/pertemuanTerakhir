@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 17, 2020 at 09:38 PM
+-- Generation Time: Jan 17, 2020 at 10:25 PM
 -- Server version: 10.1.43-MariaDB-0ubuntu0.18.04.1
 -- PHP Version: 7.4.1
 
@@ -67,33 +67,12 @@ INSERT INTO `menu` (`id_menu`, `nama_menu`, `harga_menu`, `deskripsi_menu`, `fot
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pelanggan`
---
-
-CREATE TABLE `pelanggan` (
-  `id_pelanggan` int(11) NOT NULL,
-  `email_pelanggan` varchar(100) NOT NULL,
-  `password_pelanggan` varchar(100) NOT NULL,
-  `nama_pelanggan` varchar(100) NOT NULL,
-  `nomor_telepon` varchar(20) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `pelanggan`
---
-
-INSERT INTO `pelanggan` (`id_pelanggan`, `email_pelanggan`, `password_pelanggan`, `nama_pelanggan`, `nomor_telepon`) VALUES
-(1, 'pucukpisang97@gmail.com', 'anggit12', 'Anggit Ari Utomo', '082277240835');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `pembelian`
 --
 
 CREATE TABLE `pembelian` (
   `id_pembelian` int(11) NOT NULL,
-  `id_pelanggan` int(11) NOT NULL,
+  `nama_pelanggan` varchar(50) NOT NULL,
   `tanggal_pembelian` date NOT NULL,
   `total_pembelian` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -128,12 +107,6 @@ ALTER TABLE `menu`
   ADD PRIMARY KEY (`id_menu`);
 
 --
--- Indexes for table `pelanggan`
---
-ALTER TABLE `pelanggan`
-  ADD PRIMARY KEY (`id_pelanggan`);
-
---
 -- Indexes for table `pembelian`
 --
 ALTER TABLE `pembelian`
@@ -160,12 +133,6 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `menu`
   MODIFY `id_menu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `pelanggan`
---
-ALTER TABLE `pelanggan`
-  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `pembelian`

@@ -67,9 +67,6 @@ font-size: 16px;"><?php echo date('l, d F Y') ?> &nbsp; <a href="logout.php" cla
                         <a href="index.php?halaman=pembelian"><i class="fa fa-shopping-cart fa-3x"></i>Pembelian </a>
                     </li>
                     <li>
-                        <a href="index.php?halaman=pelanggan"><i class="fa fa-users fa-3x"></i> Pelanggan</a>
-                    </li>
-                    <li>
                         <a href="logout.php"><i class="fa fa-sign-out fa-3x"></i> Logout</a>
                     </li>
                 </ul>
@@ -97,12 +94,6 @@ font-size: 16px;"><?php echo date('l, d F Y') ?> &nbsp; <a href="logout.php" cla
                 }
                 else if($_GET['halaman'] == 'hapusmenu'){
                     include 'hapusmenu.php';
-                }
-                else if($_GET['halaman'] == 'tambahpelanggan'){
-                    include 'tambahpelanggan.php';
-                }
-                else if($_GET['halaman'] == 'hapuspelanggan'){
-                    include 'hapuspelanggan.php';
                 }
             }else{
                 include 'home.php';   
