@@ -98,13 +98,12 @@ $subtotal = $m['harga_menu']*$jumlah;
 		</div>
 		<div class="col-md-4">
 			<div class="form-group">
-				<input type="text" readonly value="<?php echo $_SESSION['pelanggan']['nomor_telepon'] ?>" class="form-control">
+				<input type="text" readonly value="<?php echo $totalharga ?>" class="form-control">
 			</div>
 		</div>
 	</div>
+	<button class="btn btn-primary" name="pesan">Pesan</button>
  </form>
-
- <a href="checkout.php" class="btn btn-default btn-sm">Pesan</a>
 </div>
 </body>
 </html>
