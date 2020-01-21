@@ -6,11 +6,6 @@ include 'koneksi.php';
 
 //memasukkan $_SESSION
 
-if (!isset($_SESSION['pelanggan'])) {
-	echo "<script>alert('Anda harus login terlebih dahulu');</script>";
-	echo "<script>document.location.href='login.php';</script>";
-}
-
 ?>
  </pre>
  <!DOCTYPE html>
